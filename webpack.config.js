@@ -4,14 +4,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
-console.log('is dev:', isDev);
+
+const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`
 
 module.exports = {
     mode: process.env.NODE_ENV || 'development',
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: isDev ? '[name].js' : '[name].[contenthash].js',
+        filename: filename('js'),
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
@@ -59,7 +60,7 @@ module.exports = {
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
-            filename: isDev ? '[name].css' : '[name].[contenthash].css',
+            filename: filename('css'),
         }),
     ],
 };
