@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './css/style.css';
 
 const HelloWorld = () => {
     return (
         <h1>
-            Hello World!!!
+            Hello World
         </h1>
     );
 }
