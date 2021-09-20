@@ -16,8 +16,12 @@ module.exports = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
-     },
-    optimization: {},
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        }
+    },
     devtool: isDev ? false : 'source-map',
     devServer: {
         static: {
