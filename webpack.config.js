@@ -22,7 +22,7 @@ module.exports = {
             chunks: 'all',
         }
     },
-    devtool: isDev ? false : 'source-map',
+    devtool: isDev ? 'source-map' : false,
     devServer: {
         static: {
           directory: path.join(__dirname, 'src'),
