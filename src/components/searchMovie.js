@@ -6,8 +6,10 @@ export default function Search({head, placeholder, button}) {
     return (
         <form className='search-form'>
             <p className='search-form__head'>{head}</p>
-            <input type='search' placeholder={placeholder}/>
-            <button type='submit'>{button}</button>
+            <div className='search-form__block'>
+                <input className='search-form__input' type='search' placeholder={placeholder}/>
+                <button className='search-form__button' type='submit'>{button}</button>
+            </div>
         </form>
     )
 }

@@ -11,3 +11,36 @@
     text-transform: uppercase;
     margin: 0 0 38px;
 }
+
+.search-form__block {
+    display: flex;
+    column-gap: 14px;
+}
+
+.search-form__input {
+    padding: 16px 18px;
+    background-color: rgba(50, 50, 50, 0.8);
+    border: 0;
+    flex: 1 0 auto;
+    opacity: 0.7;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+.search-form__button {
+    padding: 18px 74px;
+    border: 0;
+    background-color: var(--red);
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: var(--white);
+    cursor: pointer;
+}
