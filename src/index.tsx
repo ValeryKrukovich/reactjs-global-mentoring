@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/style.css';
+import Footer from './components/footer';
+import Main from './components/main';
+import Header from './components/header';
 
-const HelloWorld = () => {
+const App = () => {
     return (
-        <h1>
-            Hello World
-        </h1>
+        <>
+            <React.StrictMode>
+                <Header />
+                <Main />
+                <Footer />
+            </React.StrictMode>
+        </>
     );
 }
 
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
