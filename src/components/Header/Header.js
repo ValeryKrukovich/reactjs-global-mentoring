@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import '../css/header.css';
-import Logo from './logo';
-import AddMovieButton from './addMovieButton';
-import Search from './searchMovie';
+import './Header.css';
+import Logo from '../Logo/Logo';
+import AddMovieButton from '../AddMovieButton/AddMovieButton';
+import Search from '../SearchMovie/SearchMovie';
 
 export default function Header() {
     return (

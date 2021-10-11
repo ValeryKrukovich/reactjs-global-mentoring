@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/main.css';
-import MovieListErrorBoundary from './movieListErrorBoundary';
-import MoviesList from './moviesList';
-import FilterPanel from './filterPanel';
+import './Main.css';
+import MovieListErrorBoundary from '../MoviesList/MovieListErrorBoundary';
+import MoviesList from '../MoviesList/MoviesList';
+import FilterPanel from '../FilterPanel/FilterPanel';
 
 export default function Main() {
     return (

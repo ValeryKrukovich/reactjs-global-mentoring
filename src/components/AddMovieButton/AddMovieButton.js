@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/addMovieButton.css';
+import './AddMovieButton.css';
 
 export default function AddMovieButton({title}) {
     return (

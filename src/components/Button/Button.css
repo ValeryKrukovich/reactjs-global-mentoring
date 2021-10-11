@@ -1,0 +1,20 @@
+.button {
+    padding: 16px 46px;
+    border: 1.5px solid var(--red);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button_primary {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.button_empty {
+    background-color: transparent;
+    color: var(--red);
+}

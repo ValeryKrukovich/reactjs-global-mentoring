@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/filterPanel.css';
+import './FilterPanel.css';
 
 export default function FilterPanel() {
     return (

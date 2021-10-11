@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../css/searchMovie.css';
+import './SearchMovie.css';
 
 export default function Search({head, placeholder, button}) {
     return (

@@ -1,5 +1,6 @@
 import React from "react";
-import MovieCard from './movieCard';
+import MovieCard from '../MovieCard/MovieCard';
+import './MovieList.css';
 
 let movies = [
     {

@@ -6,6 +6,10 @@
     --red: #F65261;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;

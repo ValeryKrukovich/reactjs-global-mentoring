@@ -1,26 +1,3 @@
-.main {
-    padding: 20px 60px 70px;
-    background-color: var(--dark-gray);
-}
-
-.count-movies {
-    margin: 0 0 28px 0;
-}
-
-.count-movies span {
-    font-weight: 600;
-}
-
-.movie-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 56px;
-    row-gap: 50px;
-}
-
 .movie__link {
     display: block;
     margin: 0 0 22px;
