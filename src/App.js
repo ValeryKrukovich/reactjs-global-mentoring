@@ -13,9 +13,11 @@ function App() {
                 <Header />
                 <Main />
                 <Footer />
-                <AddMovie />
-                <ConfirmDelete />
-                <SuccessfulAddMovie />
+                <div className=''>
+                    <AddMovie />
+                    <ConfirmDelete />
+                    <SuccessfulAddMovie />
+                </div>
             </React.StrictMode>
         </>
     );
