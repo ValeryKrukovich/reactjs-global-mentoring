@@ -9,9 +9,13 @@ export default function Button(props) {
         'button_primary': props.type !== 'reset',
         'button_empty': props.type === 'reset',
     });
+    const onClickHandler = () => {
+        props.onClickHandler();
+    }
 
     return (
         <button
+            onClick={onClickHandler}
             className={buttonClass}
             type={props.type}>
             {props.name}

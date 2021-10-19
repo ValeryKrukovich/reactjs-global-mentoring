@@ -10,25 +10,25 @@ export default function CheckboxList(props) {
             <ul className='checkbox-list__list'>
                 <li>
                     <input type='checkbox' name='genre' value='' id='Crime' />
-                    <label class='' for='Crime'>
+                    <label htmlFor='Crime'>
                         Crime
                     </label>
                 </li>
                 <li>
                     <input type='checkbox' name='genre' value='' id='Documentary' />
-                    <label for='Documentary'>
+                    <label htmlFor='Documentary'>
                         Documentary
                     </label>
                 </li>
                 <li>
                     <input type='checkbox' name='genre' value='' id='Horror' />
-                    <label for='Horror'>
+                    <label htmlFor='Horror'>
                         Horror
                     </label>
                 </li>
                 <li>
                     <input type='checkbox' name='genre' value='' id='Comedy' />
-                    <label for='Comedy'>
+                    <label htmlFor='Comedy'>
                         Comedy
                     </label>
                 </li>

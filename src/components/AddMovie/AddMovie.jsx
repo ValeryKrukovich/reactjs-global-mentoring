@@ -9,8 +9,16 @@ export default function AddMovie(props) {
     const genreList = [
 
     ];
+
+    const addMovie = () => {
+        console.log('Click');
+    }
+
     return (
-        <Dialog head='Add movie'>
+        <Dialog
+            head='Add movie'
+            visible={true}
+            hideDialog={props.hideDialog}>
             <form
                 className='add-movie'
                 noValidate>
@@ -46,7 +54,7 @@ export default function AddMovie(props) {
                     placeholder='Movie description' />
                 <div  className='add-movie__btn-list'>
                     <Button name='Reset' type='reset' />
-                    <Button name='Submit' type='submit' />
+                    <Button name='Submit' type='button' onClickHandler={addMovie} />
                 </div>
             </form>
         </Dialog>

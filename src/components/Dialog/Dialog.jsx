@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from "classnames";
 import './Dialog.css';
@@ -9,29 +10,38 @@ function Dialog(props) {
         'modal-dialog__small': props.size === 'small',
     });
 
+    const hideDialog = () => {
+        props.hideDialog();
+    }
+
     if (!props.visible) {
         return null;
     }
 
-    return (
+    const modalWrapp = document.getElementById('modal');
+    const modal = (
         <div className='wrapper-dialog'>
             <div className={modalDialogClass}>
                 <button
                     type='button'
                     title='close modal'
-                    className='modal-dialog__close'>
+                    className='modal-dialog__close'
+                    onClick={hideDialog}>
                 </button>
                 {props.head && <h2 className='modal-dialog__head'>{props.head}</h2>}
                 {props.children}
             </div>
         </div>
-    )
+    );
+
+    return ReactDOM.createPortal(modal, modalWrapp);
 }
 
 Dialog.propTypes = {
     head: PropTypes.string,
     size: PropTypes.string,
     visible: PropTypes.bool,
+    hideDialog: PropTypes.func,
 }
 
 Dialog.defaultProps = {

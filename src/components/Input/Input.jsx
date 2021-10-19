@@ -10,7 +10,7 @@ export default function Input(props) {
         <div>
             {props.label &&
                 <label
-                    for={id}
+                    htmlFor={id}
                     className='form-label'>
                     {props.label}
                 </label>
