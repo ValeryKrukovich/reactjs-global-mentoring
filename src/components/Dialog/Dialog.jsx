@@ -10,10 +10,6 @@ function Dialog(props) {
         'modal-dialog__small': props.size === 'small',
     });
 
-    const hideDialog = () => {
-        props.hideDialog();
-    }
-
     if (!props.visible) {
         return null;
     }
@@ -26,7 +22,7 @@ function Dialog(props) {
                     type='button'
                     title='close modal'
                     className='modal-dialog__close'
-                    onClick={hideDialog}>
+                    onClick={props.hideDialog}>
                 </button>
                 {props.head && <h2 className='modal-dialog__head'>{props.head}</h2>}
                 {props.children}
