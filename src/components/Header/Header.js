@@ -11,16 +11,10 @@ export default function Header() {
 
     const toogleAddMovie = () => {
         setIsOpen((prev) => !prev);
-        console.log('toogleAddMovie');
-        console.log(isOpen);
     }
 
     const hideDialog = () => {
-        console.log('hideDialog');
-        console.log(isOpen);
         setIsOpen(false);
-        console.log('hideDialog');
-        console.log(isOpen);
     }
 
     useEffect(() => {
