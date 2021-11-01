@@ -1,14 +1,15 @@
 import React from 'react';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
-import Header from './components/Header/Header';
+import HeaderContainer from './containers/HeaderContainer';
 
-function App() {
+function App(props) {
     return (
         <>
             <React.StrictMode>
-                <Header />
-                <Main />
+                <HeaderContainer />
+                <Main
+                    movies={props.state.movieList} />
                 <Footer />
                 <div id='modal'></div>
             </React.StrictMode>

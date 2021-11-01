@@ -5,13 +5,13 @@ import MoviesList from '../MoviesList/MoviesList';
 import FilterPanel from '../FilterPanel/FilterPanel';
 import ConfirmDelete from '../ConfirmDelete/ConfirmDelete';
 
-export default function Main() {
+export default function Main(props) {
     return (
         <>
             <div className='main'>
                 <MovieListErrorBoundary>
                     <FilterPanel />
-                    <MoviesList />
+                    <MoviesList movies={props.movies} />
                 </MovieListErrorBoundary>
             </div>
             <ConfirmDelete />

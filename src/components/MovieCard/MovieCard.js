@@ -2,18 +2,23 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './MovieCard.css';
 
-export default function MovieCard({title, description, year}) {
+export default function MovieCard(props) {
     return (
         <li>
             <a className='movie__link' href='#'>
-                <img className='movie__image' src='./img/image.jpg' alt=''/>
+                <img
+                    className='movie__image'
+                    width='322'
+                    height='455'
+                    src={props.poster}
+                    alt=''/>
             </a>
             <div className='movie__content'>
                 <div>
-                    <h3 className='movie__head'>{title}</h3>
-                    <p className='movie__text'>{description}</p>
+                    <h3 className='movie__head'>{props.title}</h3>
+                    <p className='movie__text'>{props.description}</p>
                 </div>
-                <div className='movie__year'>{year}</div>
+                <div className='movie__year'>{props.date}</div>
             </div>
         </li>
     )
