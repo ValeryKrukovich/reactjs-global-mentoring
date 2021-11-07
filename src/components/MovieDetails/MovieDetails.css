@@ -9,6 +9,10 @@
     column-gap: 60px;
 }
 
+.movie-details__image {
+    flex: 0 0 323px;
+}
+
 .search-button {
     width: 28px;
     height: 29px;

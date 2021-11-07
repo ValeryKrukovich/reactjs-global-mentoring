@@ -9,10 +9,8 @@ export default function MoviesList(props) {
             <ul className='movie-list'>
                 {props.movies.map((movie) => (
                     <MovieCard
-                        title={movie.title}
-                        description={movie.description}
-                        poster={movie.poster}
-                        date={movie.year}
+                        movie={movie}
+                        onClickHahdler={props.onMovieClickHahdler}
                         key={movie.id} />
                 ))}
             </ul>

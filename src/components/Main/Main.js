@@ -11,7 +11,9 @@ export default function Main(props) {
             <div className='main'>
                 <MovieListErrorBoundary>
                     <FilterPanel />
-                    <MoviesList movies={props.movies} />
+                    <MoviesList
+                        movies={props.movies}
+                        onMovieClickHahdler={props.onMovieClickHahdler} />
                 </MovieListErrorBoundary>
             </div>
             <ConfirmDelete />

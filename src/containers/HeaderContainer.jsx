@@ -1,15 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import Logo from '../components/Logo/Logo';
-import AddMovieButton from '../components/AddMovieButton/AddMovieButton';
-import Search from '../components/SearchMovie/SearchMovie';
 import SuccessfulAddMovie from '../components/SuccessfulAddMovie/SuccessfulAddMovie';
 import AddMovie from '../components/AddMovie/AddMovie';
 import MovieDetails from '../components/MovieDetails/MovieDetails';
 import Header from '../components/Header/Header';
 
-export default function HeaderContainer() {
+export default function HeaderContainer(props) {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedMovie, setSelectedMovie] = useState(null);
+    // const [selectedMovie, setSelectedMovie] = useState(null);
+
+    let selectedMovie = props.selectedMovie;
 
     const toogleAddMovie = () => {
         setIsOpen((prev) => !prev);
@@ -19,19 +18,12 @@ export default function HeaderContainer() {
         setIsOpen(false);
     }
 
-    useEffect(() => {
-        console.log('< = mounting');
-
-        return () => {
-            console.log('unmounting =>');
-        }
-
-    });
-
     return (
         <>
             {selectedMovie ? (
-                <MovieDetails />
+                <MovieDetails
+                    movie={selectedMovie}
+                    onClickHahdler={props.onCloseMovie}/>
             ) : (
                 <Header toogleAddMovie={toogleAddMovie} />
             )}
