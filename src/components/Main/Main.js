@@ -13,7 +13,7 @@ export default function Main(props) {
                     <FilterPanel />
                     <MoviesList
                         movies={props.movies}
-                        onMovieClickHahdler={props.onMovieClickHahdler} />
+                        onMovieClickHandler={props.onMovieClickHandler} />
                 </MovieListErrorBoundary>
             </div>
             <ConfirmDelete />

@@ -16,7 +16,7 @@ export default function MovieDetails(props) {
                         type='button'
                         className='search-button'
                         onClick={onClickHandler}>
-                        <img src='search.png' alt='' />
+                        <img src='assets/img/search.png' alt='' />
                     </button>
                 </div>
                 <div className='movie-details__content'>

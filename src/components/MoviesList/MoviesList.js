@@ -10,7 +10,7 @@ export default function MoviesList(props) {
                 {props.movies.map((movie) => (
                     <MovieCard
                         movie={movie}
-                        onClickHahdler={props.onMovieClickHahdler}
+                        onClickHandler={props.onMovieClickHandler}
                         key={movie.id} />
                 ))}
             </ul>

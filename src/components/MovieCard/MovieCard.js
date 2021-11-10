@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './MovieCard.css';
 
 export default function MovieCard(props) {
-    const onClickHahdler = (e) => {
+    const onClickHandler = (e) => {
         e.preventDefault();
-        props.onClickHahdler(props.movie);
+        props.onClickHandler(props.movie);
     }
 
     return (
@@ -13,7 +13,7 @@ export default function MovieCard(props) {
             <a
                 className='movie__link'
                 href='#'
-                onClick={onClickHahdler}>
+                onClick={onClickHandler}>
                 <img
                     className='movie__image'
                     width='322'
