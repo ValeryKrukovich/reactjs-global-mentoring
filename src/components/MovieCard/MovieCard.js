@@ -2,18 +2,31 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './MovieCard.css';
 
-export default function MovieCard({title, description, year}) {
+export default function MovieCard(props) {
+    const onClickHandler = (e) => {
+        e.preventDefault();
+        props.onClickHandler(props.movie);
+    }
+
     return (
         <li>
-            <a className='movie__link' href='#'>
-                <img className='movie__image' src='./img/image.jpg' alt=''/>
+            <a
+                className='movie__link'
+                href='#'
+                onClick={onClickHandler}>
+                <img
+                    className='movie__image'
+                    width='322'
+                    height='455'
+                    src={props.movie.poster}
+                    alt=''/>
             </a>
             <div className='movie__content'>
                 <div>
-                    <h3 className='movie__head'>{title}</h3>
-                    <p className='movie__text'>{description}</p>
+                    <h3 className='movie__head'>{props.movie.title}</h3>
+                    <p className='movie__text'>{props.movie.genre}</p>
                 </div>
-                <div className='movie__year'>{year}</div>
+                <div className='movie__year'>{props.movie.date}</div>
             </div>
         </li>
     )
@@ -21,6 +34,6 @@ export default function MovieCard({title, description, year}) {
 
 MovieCard.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    year: PropTypes.number,
+    genre: PropTypes.string.isRequired,
+    date: PropTypes.number,
 }
