@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import './MovieCard.css';
+import { formatGenres } from '../../util/util';
 
 export default function MovieCard(props) {
     const onClickHandler = (e) => {
@@ -18,15 +19,15 @@ export default function MovieCard(props) {
                     className='movie__image'
                     width='322'
                     height='455'
-                    src={props.movie.poster}
+                    src={props.movie.poster_path}
                     alt=''/>
             </a>
             <div className='movie__content'>
                 <div>
                     <h3 className='movie__head'>{props.movie.title}</h3>
-                    <p className='movie__text'>{props.movie.genre}</p>
+                    <p className='movie__text'>{formatGenres(props.movie.genres)}</p>
                 </div>
-                <div className='movie__year'>{props.movie.date}</div>
+                <div className='movie__year'>{new Date(props.movie.release_date).getFullYear()}</div>
             </div>
         </li>
     )

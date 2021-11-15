@@ -53,14 +53,14 @@ module.exports = {
                     'css-loader'
                 ],
             },
-            // {
-            //     test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-            //     use: [
-            //         {
-            //             loader: 'file-loader',
-            //         },
-            //     ],
-            // },
+            {
+                test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                    },
+                ],
+            },
         ],
     },
     plugins: [
