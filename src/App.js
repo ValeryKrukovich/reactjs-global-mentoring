@@ -20,9 +20,13 @@ function App(props) {
                 <HeaderContainer
                     selectedMovie={selectedMovie}
                     onCloseMovie={onCloseMovie} />
-                <Main
+                {/* <Main
                     // movies={props.state.movieList}
                     movies={props.store.movies.movieList}
+                    onMovieClickHandler={onMovieClickHandler} /> */}
+                    <Main
+                    // movies={props.state.movieList}
+                    // movies={props.store.movies.movieList}
                     onMovieClickHandler={onMovieClickHandler} />
                 <Footer />
                 <div id='modal'></div>

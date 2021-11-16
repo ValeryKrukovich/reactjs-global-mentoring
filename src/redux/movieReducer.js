@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const SET_MOVIE_LIST = 'SET_MOVIE_LIST';
+const SORT_MOVIE_LIST = 'SORT_MOVIE_LIST';
 
 const initialState = {
     movieList:  [
@@ -59,6 +60,7 @@ const initialState = {
         //     rating: 8.9,
         // },
     ],
+    sortBy: 'release_date',
 };
 
 const movieReducer = (state = initialState, action) => {
@@ -67,6 +69,12 @@ const movieReducer = (state = initialState, action) => {
             return {
                 ...state,
                 movieList: action.movieList,
+            }
+        case SORT_MOVIE_LIST:
+            return {
+                ...state,
+                movieList: action.movieList,
+                sortBy: action.value,
             }
         default:
             return state;
@@ -86,10 +94,28 @@ export const setMovieListAC = (movieList, flag) => {
     })
 }
 
+export const sortMovieListAC = (movieList, value) => {
+    return ({
+        type: SORT_MOVIE_LIST,
+        movieList,
+        value,
+    })
+}
+
 export const fetchMovieListAC = () => {
+    return (dispatch, getState) => {
+        const sortBy = getState().movies.sortBy;
+        axios.get(`http://localhost:4000/movies?sortOrder=desc&sortBy=${sortBy}]`).then(response => {
+            const action = setMovieListAC(response.data.data, false);
+            dispatch(action);
+        });
+    }
+}
+
+export const refreshMovieListAC = (value) => {
     return (dispatch) => {
-        axios.get('http://localhost:4000/movies').then(response => {
-            const action = setMovieListAC(response.data.data, true);
+        axios.get(`http://localhost:4000/movies?sortOrder=desc&sortBy=${value}`).then(response => {
+            const action = sortMovieListAC(response.data.data, value);
             dispatch(action);
         });
     }

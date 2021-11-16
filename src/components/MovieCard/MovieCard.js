@@ -33,8 +33,8 @@ export default function MovieCard(props) {
     )
 }
 
-MovieCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    genre: PropTypes.string.isRequired,
-    date: PropTypes.number,
-}
+// MovieCard.propTypes = {
+//     title: PropTypes.string.isRequired,
+//     genre: PropTypes.string.isRequired,
+//     date: PropTypes.number,
+// }
