@@ -20,15 +20,17 @@ export default function Input(props) {
                     id={id}
                     name={props.name}
                     rows={props.rows}
+                    placeholder={props.placeholder}
+                    onChange={props.onChange}
                     className='form-control'>
-                    {props.placeholder}
                 </textarea>
                 : <input
                     id={id}
                     type={props.type}
                     name={props.name}
-                    placeholder={props.placeholder}
-                    className='form-control' />
+                    placeholder={props.onChange}
+                    className='form-control'
+                    onChange={props.onChange} />
             }
         </div>
     )

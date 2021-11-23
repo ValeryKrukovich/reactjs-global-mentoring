@@ -2,6 +2,7 @@ import React, {useState, useCallback} from 'react';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 import HeaderContainer from './containers/HeaderContainer';
+import BasicExample from './components/FormEx';
 
 function App(props) {
     const [selectedMovie, setSelectedMovie] = useState(null);
@@ -29,6 +30,7 @@ function App(props) {
                     // movies={props.store.movies.movieList}
                     onMovieClickHandler={onMovieClickHandler} />
                 <Footer />
+                <BasicExample />
                 <div id='modal'></div>
             </React.StrictMode>
         </>
