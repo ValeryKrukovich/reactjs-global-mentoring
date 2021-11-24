@@ -106,7 +106,7 @@ export default function AddMovie(props) {
                             onChange={props.handleChange}
                             value={props.values.overview} />
                         <div  className='add-movie__btn-list'>
-                            <Button name='Reset' type='button' />
+                            <Button name='Reset' type='button' onClickHandler={() => props.resetForm()}/>
                             <Button
                                 name='Submit'
                                 type='submit' />

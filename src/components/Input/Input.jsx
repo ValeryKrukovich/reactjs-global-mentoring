@@ -22,6 +22,7 @@ export default function Input(props) {
                     rows={props.rows}
                     placeholder={props.placeholder}
                     onChange={props.onChange}
+                    value={props.value}
                     className='form-control'>
                 </textarea>
                 : <input
@@ -30,7 +31,8 @@ export default function Input(props) {
                     name={props.name}
                     placeholder={props.onChange}
                     className='form-control'
-                    onChange={props.onChange} />
+                    onChange={props.onChange}
+                    value={props.value} />
             }
         </div>
     )

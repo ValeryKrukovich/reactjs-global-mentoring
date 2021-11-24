@@ -23,7 +23,8 @@ export default function HeaderContainer(props) {
         setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             actions.setSubmitting(false);
-            // setIsOpen(false);
+            actions.resetForm();
+            setIsOpen(false);
         }, 1000);
         axios.post('http://localhost:4000/movies', {
                 title: values.title,
