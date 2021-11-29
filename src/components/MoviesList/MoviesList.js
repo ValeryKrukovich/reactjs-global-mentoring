@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import axios from 'axios';
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieList.css';
 

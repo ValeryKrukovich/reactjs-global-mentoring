@@ -2,12 +2,10 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import SuccessfulAddMovie from '../components/SuccessfulAddMovie/SuccessfulAddMovie';
 import AddMovie from '../components/AddMovie/AddMovie';
-import MovieDetails from '../components/MovieDetails/MovieDetails';
 import Header from '../components/Header/Header';
 
 export default function HeaderContainer(props) {
     const [isOpen, setIsOpen] = useState(false);
-    // const [selectedMovie, setSelectedMovie] = useState(null);
 
     let selectedMovie = props.selectedMovie;
 
@@ -34,26 +32,20 @@ export default function HeaderContainer(props) {
                 genres: values.genres,
                 runtime: Number(values.runtime),
                 overview: values.overview,
-        })
-          .then(function (response) {
-            console.log(response);
-            console.log(values);
-          })
-          .catch(function (error) {
-            console.log(error);
-            console.log(values);
-          });
+            })
+            .then(function (response) {
+                console.log(response);
+                console.log(values);
+            })
+            .catch(function (error) {
+                console.log(error);
+                console.log(values);
+            });
     }
 
     return (
         <>
-            {selectedMovie ? (
-                <MovieDetails
-                    movie={selectedMovie}
-                    onClickHahdler={props.onCloseMovie}/>
-            ) : (
-                <Header toogleAddMovie={toogleAddMovie} />
-            )}
+            <Header toogleAddMovie={toogleAddMovie} />
             {isOpen && <AddMovie hideDialog={hideDialog} onSubmit={addNewMovie} />}
             <SuccessfulAddMovie />
         </>

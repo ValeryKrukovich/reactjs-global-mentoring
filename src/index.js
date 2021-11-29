@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './assets/css/style.css';
 import App from './App';
-import state from './store/state';
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 ReactDOM.render(
-    <React.StrictMode>
         <Provider store={store}>
             {/* <App state={state} store={store.getState()} /> */}
-            <App />
-        </Provider>
-    </React.StrictMode>,
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
+        </Provider>,
     document.getElementById("root")
 );

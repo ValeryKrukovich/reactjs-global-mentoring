@@ -14,6 +14,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: filename('js'),
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
@@ -28,6 +29,7 @@ module.exports = {
         static: {
           directory: path.join(__dirname, 'src'),
         },
+        historyApiFallback: true,
         compress: true,
         port: 9000,
     },

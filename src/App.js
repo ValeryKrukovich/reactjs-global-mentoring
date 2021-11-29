@@ -2,7 +2,8 @@ import React, {useState, useCallback} from 'react';
 import Footer from './components/Footer/Footer';
 import Main from './components/Main/Main';
 import HeaderContainer from './containers/HeaderContainer';
-import BasicExample from './components/FormEx';
+import MovieDetails from './components/MovieDetails/MovieDetails';
+import { Routes, Route, Outlet, Navigate } from 'react-router-dom';
 
 function App(props) {
     const [selectedMovie, setSelectedMovie] = useState(null);
@@ -17,22 +18,32 @@ function App(props) {
 
     return (
         <>
-            <React.StrictMode>
-                <HeaderContainer
-                    selectedMovie={selectedMovie}
-                    onCloseMovie={onCloseMovie} />
-                {/* <Main
-                    // movies={props.state.movieList}
-                    movies={props.store.movies.movieList}
-                    onMovieClickHandler={onMovieClickHandler} /> */}
-                    <Main
-                    // movies={props.state.movieList}
-                    // movies={props.store.movies.movieList}
-                    onMovieClickHandler={onMovieClickHandler} />
-                <Footer />
-                <BasicExample />
-                <div id='modal'></div>
-            </React.StrictMode>
+            <Routes>
+                <Route path='/' element={<Navigate replace to='/search' />} />
+                <Route path='/search' element={
+                    <>
+                        <Outlet />
+                        <Main
+                            onMovieClickHandler={onMovieClickHandler} />
+                    </>
+                }>
+                    <Route index element={
+                        <HeaderContainer
+                            selectedMovie={selectedMovie}
+                            onCloseMovie={onCloseMovie} />
+                    } />
+                    <Route path='movie' element={
+                        <>
+                        {selectedMovie && (<MovieDetails
+                            movie={selectedMovie}
+                            onClickHahdler={onCloseMovie}/>)}
+                        </>
+                    } />
+                </Route>
+                <Route path="*" element={<p>Not Found 404</p>} />
+            </Routes>
+            <Footer />
+            <div id='modal'></div>
         </>
     );
 }
