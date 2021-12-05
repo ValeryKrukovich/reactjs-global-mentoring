@@ -1,7 +1,7 @@
 import React from "react";
-import './CheckboxList.css';
+// import './CheckboxList.css';
 
-export default function CheckboxList(props) {
+export function CheckboxList(props) {
     return (
         <fieldset className='checkbox-list'>
             <legend className='checkbox-list__legend'>

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxList render CheckboxList snapshot 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="checkbox-list"
+  >
+    <legend
+      class="checkbox-list__legend"
+    />
+    <ul
+      class="checkbox-list__list"
+    >
+      <li>
+        <input
+          id="Crime"
+          type="checkbox"
+          value="Crime"
+        />
+        <label
+          for="Crime"
+        >
+          Crime
+        </label>
+      </li>
+      <li>
+        <input
+          id="Documentary"
+          type="checkbox"
+          value="Documentary"
+        />
+        <label
+          for="Documentary"
+        >
+          Documentary
+        </label>
+      </li>
+      <li>
+        <input
+          id="Horror"
+          type="checkbox"
+          value="Horror"
+        />
+        <label
+          for="Horror"
+        >
+          Horror
+        </label>
+      </li>
+      <li>
+        <input
+          id="Comedy"
+          type="checkbox"
+          value="Comedy"
+        />
+        <label
+          for="Comedy"
+        >
+          Comedy
+        </label>
+      </li>
+    </ul>
+  </fieldset>
+</DocumentFragment>
+`;
