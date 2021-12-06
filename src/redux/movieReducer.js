@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const SET_MOVIE_LIST = 'SET_MOVIE_LIST';
-const SORT_MOVIE_LIST = 'SORT_MOVIE_LIST';
+export const SET_MOVIE_LIST = 'SET_MOVIE_LIST';
+export const SORT_MOVIE_LIST = 'SORT_MOVIE_LIST';
 
 export const initialState = {
     movieList:  [
