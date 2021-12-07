@@ -4,6 +4,7 @@ import MovieListErrorBoundary from '../MoviesList/MovieListErrorBoundary';
 import MoviesList from '../MoviesList/MoviesList';
 import FilterPanel from '../FilterPanel/FilterPanel';
 import ConfirmDelete from '../ConfirmDelete/ConfirmDelete';
+import MovieListContainer from '../MoviesList/MovieListContainer';
 
 export default function Main(props) {
     return (
@@ -11,9 +12,10 @@ export default function Main(props) {
             <div className='main'>
                 <MovieListErrorBoundary>
                     <FilterPanel />
-                    <MoviesList
+                    <MovieListContainer onMovieClickHandler={props.onMovieClickHandler} />
+                    {/* <MoviesList
                         movies={props.movies}
-                        onMovieClickHandler={props.onMovieClickHandler} />
+                        onMovieClickHandler={props.onMovieClickHandler} /> */}
                 </MovieListErrorBoundary>
             </div>
             <ConfirmDelete />

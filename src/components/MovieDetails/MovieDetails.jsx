@@ -7,6 +7,8 @@ export default function MovieDetails(props) {
         props.onClickHahdler();
     }
 
+    console.log(props.movie);
+
     return (
         <>
             <div className='movie-details'>

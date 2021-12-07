@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieList.css';
 
 export default function MoviesList(props) {
+
+    useEffect(() => {
+        props.fetchMovieList();
+    }, []);
+
     return (
         <>
             <p className='count-movies'><span>{props.movies.length}</span> movies found</p>
